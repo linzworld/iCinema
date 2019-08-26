@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--导入类-->
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!--设置布局-->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lzh.cinema.view.LoginController">
+  <children>
+      <GridPane alignment="center" hgap="10" layoutX="-5.0" layoutY="-2.0" onKeyPressed="#onLoginEnter" prefHeight="815.0" prefWidth="1213.0" vgap="10" AnchorPane.bottomAnchor="-13.0" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="-2.0">
+         <children>
+            <Label text="用户名:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="account" promptText="请输入用户名" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="密码:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <PasswordField fx:id="passwordField" promptText="请输入密码" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <CheckBox fx:id="admin" mnemonicParsing="false" onAction="#onAdmin" prefHeight="21.0" prefWidth="97.0" text="记住密码" />
+                  <Button fx:id="loginbt" onAction="#onLogin" text="登录" />
+               </children>
+            </HBox>
+            <Text fx:id="hintText" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+            <Text fx:id="actiontarget" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Text text="Welcome" wrappingWidth="121.0">
+               <font>
+                  <Font name="Consolas" size="28.0" />
+               </font>
+            </Text>
+            <Text fx:id="actiontarget" fill="#bf2d10" fontSmoothingType="LCD" wrappingWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+            </Text>
+            <Hyperlink fx:id="register" onAction="#onRegister" text="点此注册" GridPane.rowIndex="4" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints maxWidth="91.0" minWidth="49.0" prefWidth="76.0" />
+            <ColumnConstraints maxWidth="202.0" minWidth="160.0" prefWidth="175.0" />
+         </columnConstraints>
+         <padding>
+            <Insets bottom="10" left="25" right="25" top="25" />
+         </padding>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

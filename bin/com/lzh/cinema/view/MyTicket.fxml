@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lzh.cinema.view.MyTicketController">
+   <children>
+      <Pane layoutX="1.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1219.0" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-20.0" AnchorPane.topAnchor="6.0">
+         <children>
+            <Pagination fx:id="pn_pagination" layoutX="24.0" layoutY="360.0" maxPageIndicatorCount="15" pageCount="100" prefHeight="421.0" prefWidth="1129.0" />
+            <TableView fx:id="tv_persontable" layoutX="26.0" layoutY="327.0" prefHeight="400.0" prefWidth="1150.0">
+               <columns>
+                  <TableColumn fx:id="scheduleCol" prefWidth="99.0" text="单号" />
+                  <TableColumn fx:id="dateCol" prefWidth="157.0" text="日期" />
+                  <TableColumn fx:id="sessionCol" prefWidth="107.0" text="场次" />
+                  <TableColumn fx:id="hallCol" prefWidth="156.0" text="播放厅" />
+                  <TableColumn fx:id="movieNameCol" prefWidth="213.0" text="电影名" />
+                  <TableColumn fx:id="seatCol" prefWidth="107.0" text="座位号" />
+                  <TableColumn prefWidth="123.0" text="列数" fx:id="xCol" />
+                  <TableColumn fx:id="yCol" prefWidth="106.0" text="行数" />
+               </columns>
+            </TableView>
+            <Button fx:id="backUser" layoutX="1059.0" layoutY="22.0" mnemonicParsing="false" onAction="#onBackUser" text="返回大厅" />
+            <TextField fx:id="UQueryCt" layoutX="52.0" layoutY="286.0" promptText="按电影名查询" />
+            <Button fx:id="UQueryM" layoutX="281.0" layoutY="286.0" mnemonicParsing="false" onAction="#onUQueryM" prefHeight="30.0" prefWidth="71.0" text="查询" />
+            <Button fx:id="cancel" layoutX="1065.0" layoutY="283.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="37.0" prefWidth="83.0" text="退票" />
+            <Button layoutX="26.0" layoutY="14.0" mnemonicParsing="false" prefHeight="260.0" prefWidth="934.0">
+               <effect>
+                  <ImageInput />
+               </effect></Button>
+            <Text fx:id="result" layoutX="931.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="无" wrappingWidth="254.30029296875" />
+            <Label layoutX="931.0" layoutY="214.0" text="退票信息" />
+            <Label layoutX="931.0" layoutY="144.0" text="余额" />
+            <Text fx:id="money" layoutX="931.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="169.30029296875" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

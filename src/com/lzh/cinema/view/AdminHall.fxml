@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lzh.cinema.view.AdminHallController">
+   <children>
+      <Pane layoutX="1.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="6.0">
+         <children>
+            <Pagination fx:id="pn_pagination" layoutX="24.0" layoutY="360.0" maxPageIndicatorCount="15" pageCount="100" prefHeight="421.0" prefWidth="1129.0" />
+            <TableView fx:id="tv_persontable" layoutX="26.0" layoutY="327.0" prefHeight="400.0" prefWidth="1150.0">
+               <columns>
+                  <TableColumn fx:id="movieidCol" prefWidth="142.0" text="电影单号" />
+                  <TableColumn fx:id="movieNameCol" prefWidth="212.0" text="电影名" />
+                  <TableColumn fx:id="mainactorCol" prefWidth="177.0" text="电影主演" />
+                  <TableColumn fx:id="directorCol" prefWidth="255.0" text="导演" />
+                  <TableColumn fx:id="priceCol" prefWidth="142.0" text="票价" />
+                  <TableColumn fx:id="durationCol" prefWidth="175.0" text="播放时长(分钟)" />
+               </columns>
+            </TableView>
+            <Button fx:id="backLogin" layoutX="1066.0" layoutY="27.0" mnemonicParsing="false" onAction="#onBackLogin" text="返回大厅" />
+            <TextField fx:id="AQueryMCt" layoutX="52.0" layoutY="286.0" promptText="按电影名查询" />
+            <Button fx:id="AQueryM" layoutX="281.0" layoutY="286.0" mnemonicParsing="false" onAction="#onAQueryM" prefHeight="30.0" prefWidth="71.0" text="查询" />
+            <Button fx:id="delete" layoutX="1070.0" layoutY="279.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="37.0" prefWidth="83.0" text="删除电影" />
+            <GridPane layoutX="52.0" layoutY="42.0" prefHeight="181.0" prefWidth="850.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="电影单号" />
+                  <Label text="电影名" GridPane.columnIndex="1" />
+                  <Label text="电影主演" GridPane.columnIndex="2" />
+                  <Label text="导演" GridPane.columnIndex="3" />
+                  <Label text="播放时长(分钟)" GridPane.columnIndex="5" />
+                  <Label text="票价" GridPane.columnIndex="4" />
+                  <TextField fx:id="amoviename" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="amainactor" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="adirector" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <TextField fx:id="aprice" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <TextField fx:id="aduration" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <TextField fx:id="cmovieid" prefHeight="30.0" prefWidth="165.0" GridPane.rowIndex="1" />
+                  <TextField fx:id="cmoviename" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="cmainactor" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="cdirector" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <TextField fx:id="cprice" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <TextField fx:id="cduration" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Button fx:id="alter" layoutX="933.0" layoutY="116.0" mnemonicParsing="false" onAction="#onAlter" text="更改电影" />
+            <Button fx:id="add" layoutX="933.0" layoutY="177.0" mnemonicParsing="false" onAction="#onAdd" text="添加电影" />
+            <GridPane layoutX="50.0" layoutY="154.0" prefHeight="30.0" prefWidth="850.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
